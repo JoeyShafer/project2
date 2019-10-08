@@ -11,8 +11,8 @@ public class MesoInherit  extends MesoAbstract {
 	 * 
 	 * @Param stID The station id..
 	 */
-	public MesoInherit (String stID) {
-		this.stID = stID;
+	public MesoInherit (MesoStation stid) {
+		this.stID = stid.getStID();
 	}
 	
 	/*
@@ -25,7 +25,7 @@ public class MesoInherit  extends MesoAbstract {
 	public int[] calAverage() {
 		//Create array to store the average and the station id in ascii form
 		int[] calAverage = new int[3];
-		int[] ascii = new int[stID.length()];
+		int[] ascii = new int[4];
 		
 		//converts station id to ascii numbers
 		for (int i = 0; i < stID.length(); ++i) {
@@ -55,7 +55,7 @@ public class MesoInherit  extends MesoAbstract {
 	public char letterAverage() {
 		//converts average ascii number to a char that repersents a letter.
 		char letter;
-		int[] ascii = new int[stID.length()];
+		int[] ascii = new int[4];
 		
 		//converts station id to ascii numbers
 		for (int i = 0; i < stID.length(); ++i) {
