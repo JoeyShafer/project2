@@ -51,6 +51,17 @@ public class LetterAvg extends PosAvg{
 		return stationsWithLetter;
 	}
 	
+	@Override 
+	public String toString() 
+	{
+		ArrayList<String> stations = stationsWithLetterAvg(letter);
+		String str = "They are: \n";
+		for (int i = 0; i < stations.size(); ++i) {
+			str += stations.get(i) + "\n";
+		}
+		return str;
+	}
+	
 	
 
 }
