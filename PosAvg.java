@@ -3,12 +3,17 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class PosAvg extends MesoStation {
+public class PosAvg  {
 	
-	private ArrayList<String> stations = new ArrayList<String>();
+	protected ArrayList<String> stations = new ArrayList<String>();
 	
+	private String stID;
+	
+	public PosAvg() {
+		
+	}
 	public PosAvg (String stID) throws IOException  {
-		super(stID);
+		this.stID = stID;
 		read();
 	}
 	
