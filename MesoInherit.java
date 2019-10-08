@@ -4,7 +4,6 @@ public class MesoInherit  extends MesoAbstract {
 	//The station Id
 	private String stID;
 	
-	private int[] calAverage;
 	
 	/*
 	 * Constructor for MesoInherit takes in one string repersenting the station id.

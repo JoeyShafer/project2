@@ -1,5 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -64,9 +63,9 @@ public class LetterAvg extends PosAvg{
 	public String toString() 
 	{
 		ArrayList<String> stations = stationsWithLetterAvg(letter);
-		String str = "\nThey are: \n";
+		String str = "\nThey are:";
 		for (int i = 0; i < stations.size(); ++i) {
-			str += stations.get(i) + "\n";
+			str += "\n" + stations.get(i);
 		}
 		return str;
 	}

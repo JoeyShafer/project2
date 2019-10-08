@@ -102,7 +102,7 @@ public class PosAvg  {
 	public String toString() {
 		int index  = indexOfStation();
 		String[] avgStations = indexAvgOfStations(index);
-		return String.format("This index is average of %s and %s, and %s and %s, and so on."
+		return String.format("This index is average of %s and %s, %s and %s, and so on."
 				, avgStations[0], avgStations[1], avgStations[2], avgStations[3]);
 	
 	}
