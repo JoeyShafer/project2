@@ -54,7 +54,22 @@ public class MesoInherit  extends MesoAbstract {
 	 */
 	public char letterAverage() {
 		//converts average ascii number to a char that repersents a letter.
-		char letter = (char)calAverage[2];
+		char letter;
+		int[] ascii = new int[stID.length()];
+		
+		//converts station id to ascii numbers
+		for (int i = 0; i < stID.length(); ++i) {
+			ascii[i] = (int)stID.charAt(i);
+		}
+		
+		//finds the average of the ascii numbers
+		double average = 0;
+		for (int i = 0; i < ascii.length; ++i) {
+			average += ascii[i];
+		}
+		average = average/ascii.length;
+		int AsciiAvg = (int)Math.round(average);
+		letter = (char)AsciiAvg;
 		return letter;
 		
 	}
