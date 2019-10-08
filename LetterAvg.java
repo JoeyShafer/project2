@@ -35,6 +35,18 @@ public class LetterAvg extends PosAvg{
 		return numOfStations;
 	}
 	
+	public ArrayList<String> stationsWithLetterAvg(char letter) 
+	{
+		ArrayList<String> stationsWithLetter = new ArrayList<String>();
+		
+		for (int i = 0; i < stations.size(); ++i) {
+			if (letter == stations.get(i).charAt(0)) {
+				stationsWithLetter.add(stations.get(i));
+			}
+		}
+		return stationsWithLetter;
+	}
+	
 	
 
 }
