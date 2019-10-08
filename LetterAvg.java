@@ -19,9 +19,14 @@ public class LetterAvg extends PosAvg{
 		this.letter = letter;
 	}
 	
+	/*
+	 * Finds the number of station that start with the average letter.
+	 */
 	public int numberOfStationWithLetterAvg() 
 	{
 		int numOfStations = 0;
+		
+		//Loops through station array to count how many stations start with the avg letter.
 		for (int i = 0; i < stations.size(); ++i) {
 			if (letter == stations.get(i).charAt(0)) {
 				++numOfStations;
