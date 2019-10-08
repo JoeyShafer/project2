@@ -43,7 +43,6 @@ public class MesoInherit  extends MesoAbstract {
 		calAverage[0] = (int)Math.ceil(average);
 		calAverage[1] = (int)Math.floor(average);
 		calAverage[2] = (int)Math.round(average);
-		this.calAverage = calAverage;
 		return calAverage;
 	}
 	

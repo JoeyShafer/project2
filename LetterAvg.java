@@ -17,6 +17,7 @@ public class LetterAvg extends PosAvg{
 	public LetterAvg (char letter) throws IOException 
 	{
 		this.letter = letter;
+		read();
 	}
 	
 	/*
@@ -51,11 +52,19 @@ public class LetterAvg extends PosAvg{
 		return stationsWithLetter;
 	}
 	
+	/*
+	 * Prints out the stations that start with the the average letter
+	 * 
+	 * @return String formated as: 
+	 * They are:
+	 * station1 \n
+	 * station2 \n ...
+	 */
 	@Override 
 	public String toString() 
 	{
 		ArrayList<String> stations = stationsWithLetterAvg(letter);
-		String str = "They are: \n";
+		String str = "\nThey are: \n";
 		for (int i = 0; i < stations.size(); ++i) {
 			str += stations.get(i) + "\n";
 		}

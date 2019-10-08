@@ -93,6 +93,11 @@ public class PosAvg  {
 		return avgStations;
 	}
 	
+	/*
+	 * Prints out the stations whose  index averages equal the index of the orginal station.
+	 * 
+	 * @return String formated as "This index is average of %s and %s, and %s and %s, and so on."
+	 */
 	@Override
 	public String toString() {
 		int index  = indexOfStation();
