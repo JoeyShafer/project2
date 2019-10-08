@@ -14,9 +14,20 @@ public class LetterAvg extends PosAvg{
 	 * 
 	 * @Param letter the average letter
 	 */
-	public LetterAvg (char letter) throws IOException {
+	public LetterAvg (char letter) throws IOException 
+	{
 		this.letter = letter;
-		read();
+	}
+	
+	public int numberOfStationWithLetterAvg() 
+	{
+		int numOfStations = 0;
+		for (int i = 0; i < stations.size(); ++i) {
+			if (letter == stations.get(i).charAt(0)) {
+				++numOfStations;
+			}
+		}
+		return numOfStations;
 	}
 	
 	
