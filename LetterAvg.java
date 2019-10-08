@@ -8,7 +8,8 @@ public class LetterAvg extends PosAvg{
 	//The Average letter
 	private char letter;
 	
-	/*constructor for LetterAvg takes in a char repersenting the average letter 
+	/*
+	 * Constructor for LetterAvg takes in a char repersenting the average letter 
 	 * from the station adn reads in "Mesonet.txt"
 	 * 
 	 * @Param letter the average letter

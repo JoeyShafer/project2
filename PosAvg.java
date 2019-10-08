@@ -16,7 +16,8 @@ public class PosAvg  {
 		
 	}
 	
-	/*Constructor for PosAvg takes in a staion id and reads in "Mesonet.txt"
+	/*
+	 * Constructor for PosAvg takes in a staion id and reads in "Mesonet.txt"
 	 * 
 	 * @Param stID the station Id
 	 */
@@ -37,7 +38,7 @@ public class PosAvg  {
        String strg;
        
        // Read in and throw out the first five lines of the file to get to station Id's.
-       for (int i = 0; i < 6; ++i) {
+       for (int i = 0; i < 3; ++i) {
        	strg = br.readLine();
        }
        
@@ -48,7 +49,7 @@ public class PosAvg  {
        while (strg != null) {
        
        	// Get the station Id from the line and add to staion array.
-       	String stationID = strg.substring(4, 8);
+       	String stationID = strg.substring(1,5);
        	stations.add(stationID);
        	
        	//Read next line and increase lineNum and index.
@@ -58,4 +59,23 @@ public class PosAvg  {
        br.close();
 		
 	}
+	
+	/*
+	 * Finds the index of the staion id in the staions array.
+	 * 
+	 * @Param stID the id of the station
+	 */
+	public int indexOfStation(String stID) {
+		int indexOfStation = 0;
+		
+		//Loops through stations array to find the stID and gets the index of it.
+		for (int i = 0; i < stations.size(); ++i) {
+			if (stID.equalsIgnoreCase(stations.get(i))) {
+				indexOfStation = i;
+				break;
+			}
+		}
+		return indexOfStation;
+	}
+	
 }
