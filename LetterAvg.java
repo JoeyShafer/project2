@@ -35,10 +35,14 @@ public class LetterAvg extends PosAvg{
 		return numOfStations;
 	}
 	
+	/*
+	 * Finds the stations that start with the average letter and adds them to an arraylist.
+	 * 
+	 * @Param letter the average letter.
+	 */
 	public ArrayList<String> stationsWithLetterAvg(char letter) 
 	{
 		ArrayList<String> stationsWithLetter = new ArrayList<String>();
-		
 		for (int i = 0; i < stations.size(); ++i) {
 			if (letter == stations.get(i).charAt(0)) {
 				stationsWithLetter.add(stations.get(i));
