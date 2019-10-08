@@ -4,6 +4,8 @@ public class MesoInherit  extends MesoAbstract {
 	//The station Id
 	private String stID;
 	
+	private int[] calAverage;
+	
 	/*
 	 * Constructor for MesoInherit takes in one string repersenting the station id.
 	 * 
@@ -27,6 +29,13 @@ public class MesoInherit  extends MesoAbstract {
 		calAverage[0] = (int)Math.ceil(average);
 		calAverage[1] = (int)Math.floor(average);
 		calAverage[2] = (int)Math.round(average);
+		this.calAverage = calAverage;
 		return calAverage;
+	}
+	
+	public char letterAverage() {
+		char letter = (char)calAverage[2];
+		return letter;
+		
 	}
 }
