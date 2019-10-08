@@ -5,13 +5,21 @@ import java.util.ArrayList;
 
 public class PosAvg  {
 	
+	//ArrayList that contains all if the station ids
 	protected ArrayList<String> stations = new ArrayList<String>();
-	
+
+	//The station id
 	private String stID;
 	
+	//default constructor
 	public PosAvg() {
 		
 	}
+	
+	/*Constructor for PosAvg takes in a staion id and reads in "Mesonet.txt"
+	 * 
+	 * @Param stID the station Id
+	 */
 	public PosAvg (String stID) throws IOException  {
 		this.stID = stID;
 		read();

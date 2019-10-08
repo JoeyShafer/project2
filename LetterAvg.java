@@ -5,9 +5,14 @@ import java.util.ArrayList;
 
 public class LetterAvg extends PosAvg{
 	
-	private ArrayList<String> stations = new ArrayList<String>();
+	//The Average letter
 	private char letter;
 	
+	/*constructor for LetterAvg takes in a char repersenting the average letter 
+	 * from the station adn reads in "Mesonet.txt"
+	 * 
+	 * @Param letter the average letter
+	 */
 	public LetterAvg (char letter) throws IOException {
 		this.letter = letter;
 		read();
