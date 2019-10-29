@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class PosAvg  {
 	
-	//ArrayList that contains all if the station ids
+	//ArrayList that contains all if the station ids.
 	protected ArrayList<String> stations = new ArrayList<String>();
 
-	//The station id
+	//The station id.
 	private String stID;
 	
 	//default constructor
